@@ -33,10 +33,17 @@
 }
 
 .Grid .Articulo{
+    margin-left: 5%;
+    font-size: 2em;
     grid-area: articulo;
 }
 
 .Grid .Tabla{
+
+    background-color: #e76464;
+    color: white;
+
+    font-size: 100%;
     grid-area: tabla;
 }
 
@@ -69,7 +76,6 @@ table{
 
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
 
     border-collapse: collapse;
     background-color: #dee2e6;
