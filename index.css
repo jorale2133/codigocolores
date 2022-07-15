@@ -1,0 +1,21 @@
+table{
+
+    margin: auto;
+
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+
+    border-collapse: collapse;
+    background-color: #dee2e6;
+
+}
+
+table th, table td{
+    border: 1px solid white;
+    padding: 5px 10px;
+}
+
+
+a{
+    font-size: 0.8em;
+}

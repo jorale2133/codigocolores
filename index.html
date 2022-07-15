@@ -7,6 +7,7 @@
     <title>Calculo del Código de Colores</title>
 
     <link rel="stylesheet" href="estilosGenerales.css">
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
     
@@ -20,12 +21,23 @@
 
         <!-- Contenido -->
             <article class="Articulo">
-                El código de colores en las resistencias son
+                El código de colores en las resistencias es un
+                código que nos ayuda a identificar el valor de
+                las resistencias comerciales. <br><br>
                 
+                Las primeras dos bandas establecen el valor del 
+                resistor. La tercera banda es el multiplicador,
+                esta indicara los ceros al final. La cuarta banda
+                indica la tolerancia.   <br><br>
+                
+                <img src="Imagenes/TablaColoresResistencias.png" alt="Tabla Código Colores">
+                <br>
+                <a href="https://kolwidi.com/blogs/blog-kolwidi/codigo-de-colores-de-resistencias-electricas">Referencia Tabla Colores</a>
+
             </article>
 
         <!-- Tabla de resistencias  -->            
-            <table class="Tabla">
+            <table class="Widget">
                 <thead>
                     <th colspan="7">Resistencias Comerciales</th>
                 </thead>    
@@ -170,7 +182,7 @@
             </table>
 
         <!-- Imagen de resistencia-->
-            <div class="Resistencia">
+            <div class="Componente">
                 <div id="Banda1">1</div>
                 <div id="Banda2">2</div>
                 <div id="Banda3">3</div>
@@ -186,7 +198,6 @@
 
     </div>
     
-
 
 
     <script src="index.js"></script>
