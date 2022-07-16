@@ -1,0 +1,69 @@
+:root{
+    --colorUno: red;
+    --colorDos: black;
+    --colorTres: yellow;
+    --colorTol: gold;
+    --colorBorde: rgb(1, 34, 83); 
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.dibujoResistencia{
+    width: 200px;
+    height: 100px;
+    margin: 100px;
+    padding: 10px;
+    border: 1px solid rgb(255, 255, 255);
+
+    display: flex;
+    align-items: center;
+}
+
+.extremo{
+    width: 30%;
+    height: 80%;
+    border: 3px solid var(--colorBorde);
+    border-radius: 25% ;
+    display: flex;
+    justify-content: center;
+}
+
+.cuerpo{
+    width: 70%;
+    height: 50%;
+    border-top: solid var(--colorBorde);
+    border-bottom: solid var(--colorBorde);
+    display: flex;
+    flex-direction: row;
+}
+
+.banda{
+    width: 15px;
+    height: 100%;
+
+}
+
+.cuerpo .banda{
+    border-left: 20px solid white;
+}
+
+
+.uno{
+    background: var(--colorUno);
+}
+
+.dos{
+    background: var(--colorDos);
+}
+
+.tres{
+    background: var(--colorTres);
+}
+
+.cuatro{
+    background: var(--colorTol);
+}
+
