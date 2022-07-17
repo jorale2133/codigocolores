@@ -32,27 +32,6 @@ class Resitencia{
         this.unidad = unidad;
     }
 
-/*
-    constructor( banda1, banda2, banda3, banda4){
-        this.color[0] = banda1;
-        this.color[1] = banda2;
-        this.color[2] = banda3;
-        this.color[3] = banda4;
-    }
-*/
-
-    getValor(){
-        return this.valor;
-    }
-
-    getTolerancia(){
-        return this.tolerancia;
-    }
-
-    getColor(){
-        return this.color;
-    }
-
     comprobacion(){       
         
         if( this.resistenciasComerciales.includes( this.valor + this.unidad) ){
@@ -65,16 +44,7 @@ class Resitencia{
     convertir( ){
 
         var numero;
-        var contador = 0;
-
         numero = this.expresionesAUnidades();
-
-        while ( numero >= 100 ){
-            numero = numero/10;
-            contador++;
-            console.log( numero + " " + contador);
-        }
-
         this.convertirABandas( numero, contador);
 
 
@@ -95,25 +65,27 @@ class Resitencia{
         return numero;
     }
 
-    convertirABandas(temporal, banda3){
+    convertirABandas(numero){
         var banda1;
         var banda2;
         var banda3;
         var banda4;
 
-        /*Exceopcion para los numeros decimales */
-        if( !Number.isInteger(temporal)){
-            banda3 = 10;
-            temporal = temporal * 10;
+        //Se ontiene el numero
+        while ( numero >= 100 ){
+            numero = numero/10;
+            banda4++;
         }
 
+        /*Exceopcion para los numeros decimales */
+        if( !Number.isInteger(numero)){
+            banda3 = 10;
+            numero = numero * 10;
+        }
 
         /*se asignan bandas*/
-        banda1 = parseInt( temporal/10 );
-        banda2 = Math.round(((temporal/10) - banda1) * 10 );
-        
-        console.log( banda1, banda2);
-        
+        banda1 = parseInt( numero / 10 );
+        banda2 = Math.round((( numero / 10) - banda1) * 10 );
 
         this.codigocolor = [
             this.colorBanda[banda1], this.colorBanda[banda2],
