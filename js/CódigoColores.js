@@ -45,9 +45,7 @@ class Resitencia{
 
         var numero;
         numero = this.expresionesAUnidades();
-        this.convertirABandas( numero, contador);
-
-
+        this.convertirABandas( numero );
         console.log( this.codigocolor );
  
     }
@@ -65,16 +63,16 @@ class Resitencia{
         return numero;
     }
 
-    convertirABandas(numero){
+    setBandas(numero){
         var banda1;
         var banda2;
-        var banda3;
+        var banda3=0;
         var banda4;
 
         //Se ontiene el numero
         while ( numero >= 100 ){
             numero = numero/10;
-            banda4++;
+            banda3++;
         }
 
         /*Exceopcion para los numeros decimales */
@@ -91,7 +89,10 @@ class Resitencia{
             this.colorBanda[banda1], this.colorBanda[banda2],
             this.colorBanda[banda3], this.colorBanda[banda4]
         ];
-        
+    }
+
+    setTolerancia(){
+        dir = [][];
     }
 
 }
