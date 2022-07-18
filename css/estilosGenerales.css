@@ -43,6 +43,9 @@
 }
 
 .Grid .Componente{
+
+    margin-left: 2%;
+    margin-right: 2%;
     grid-area: section;
 }
 

@@ -18,12 +18,10 @@
 }
 
 .Grid .Widget{
-    
     background-color: var(--colorPrincipal);
     color: var(--colorPrincipalFont);
-
-
 }
+
 
 table{
 
@@ -46,13 +44,14 @@ a{
 }
 
 button, select, input{
-
-    border-radius: 5% 5%;
-
-    width: 110px;
+    
+    width: 80px;
     height: var(--tamañoAltura);
+    padding-left: 10px;
+    padding-right: 10px;    
     border: var(--colorPrincipal);
-
+    border-radius: 5% 5%;
+    margin: auto;
     background-color: var(--colorPrincipal);
     color: var(--colorPrincipalFont);
 
@@ -60,12 +59,15 @@ button, select, input{
 
 }
 
-input{
-    padding-left: 10px;
+button{
+    margin: 5% 200px;
 }
 
-button:hover,select:hover,input:hover{
+
+button:hover, select:hover,
+input:hover{
     width: 120px;
     background-color: #b14b4b;
     transition: 0.5s;
 }
+
