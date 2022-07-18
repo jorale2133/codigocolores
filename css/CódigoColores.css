@@ -1,6 +1,7 @@
 :root{
     --colorPrincipal: #FF5757;
     --colorPrincipalFont: white;
+    --tamañoAltura: 40px;
 }
 
 .Grid .Cabecera{
@@ -42,4 +43,25 @@ table th, table td{
 
 a{
     font-size: 0.8em;
+}
+
+button, select, input{
+
+    border-radius: 5% 5%;
+
+    width: 100px;
+    height: var(--tamañoAltura);
+    border: var(--colorPrincipal);
+
+    background-color: var(--colorPrincipal);
+    color: var(--colorPrincipalFont);
+
+    font: 17px bold ;    
+
+}
+
+button:hover{
+    width: 110px;
+    background-color: #b14b4b;
+    transition: 0.5s;
 }

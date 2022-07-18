@@ -190,9 +190,30 @@
         <div class="Componente">
         
             <label for="">Resistencia</label>
-            <input type="color" name="banda1" id="">
-            <button>Boton</button>
-        <!-- Dibijo de la resistencia-->
+            <input type="number" name="resistor" id="resistencia">
+            
+            <!-- inputs para la unidades-->
+            <select name="unidades" id="unidades">
+                <option value="SN"> Sin unidades</option>
+                <option value="K"> K </option>
+                <option value="M"> M </option>
+            </select>
+
+            <!-- inputs para la tolerancias-->    
+            <select name="tolerancias" id="tolerancias">
+                <option value="0.05%">  0.05%   </option>
+                <option value="0.10%">  0.10%   </option>
+                <option value="0.25%">  0.25%   </option>
+                <option value="0.5%">   0.5%    </option>
+                <option value="1%">     1%      </option>
+                <option value="2%">     2%%     </option>
+                <option value="5%">     5%      </option>
+                <option value="10%">    10%     </option>
+            </select>
+
+            <button>Calcular</button>
+        
+            <!-- Dibijo de la resistencia-->
             <div class="dibujoResistencia">
                 <div class="extremo">
                     <div class="banda uno"></div>            
