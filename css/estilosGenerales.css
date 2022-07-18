@@ -10,13 +10,13 @@
     display: grid;
     grid-gap: 20px;
 
-    grid-template-columns: 5fr 3fr 1fr;
-    grid-template-rows: 1fr 4fr 6fr 1fr;
+    grid-template-columns: 6fr 3fr;
+    grid-template-rows: 1fr 4fr 4fr 1fr;
 
-    grid-template-areas:    "header header header"
-                            "articulo widget sidebar"
-                            "section section section"
-                            "footer footer footer" ;
+    grid-template-areas:    "header header "
+                            "articulo widget "
+                            "section1 section2 "
+                            "footer footer " ;
 
 
 }
@@ -46,7 +46,7 @@
 
     margin-left: 2%;
     margin-right: 2%;
-    grid-area: section;
+    grid-area: section1;
 }
 
 
