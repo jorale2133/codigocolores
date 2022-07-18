@@ -108,10 +108,8 @@ class Resitencia{
 
 }
 
-let res = new Resitencia( 1.8, "M", "5%" );
+let res = new Resitencia( 1.8, "M", "10%" );
 res.convertirABandas();
-res.buscarTolerancia();
-
 
 
 

@@ -24,7 +24,7 @@
 .Grid .Cabecera{
     padding: 15px;
 
-    font-size: 200%;
+    font-size: 3rem;
 
     grid-area: header;
 }
