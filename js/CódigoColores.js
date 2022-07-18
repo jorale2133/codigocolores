@@ -4,6 +4,7 @@ class Resitencia{
     unidad;
     tolerancia;
     codigocolor;
+
     colorBanda = [ "black", "brown", "red", "orange", "yellow", 
                 "green", "blue", "violet", "grey", "white",
                 "gold", "silver" ];
@@ -22,8 +23,8 @@ class Resitencia{
                             "8.2", "82", "820", "8.2K", "82K", "820K", "8.2M",
                             "9.1", "91", "910", "9.1K", "91K", "910K", "9.1M" ];
 
-    tolerancias = [ "1%", "2%", "0.5%", "0.25%", "0.10%", "0.05%",
-        "5%", "10%" ];
+    tolerancias = [ "", "1%", "2%", "", "", "0.5%", "0.25%", "0.10%", "0.05%",
+                    "", "5%", "10%" ];
 
 
     constructor( valor, unidad, tolerancia ){
@@ -32,20 +33,19 @@ class Resitencia{
         this.unidad = unidad;
     }
 
-    comprobacion(){       
-        
+    convertirABandas(){
+
         if( this.resistenciasComerciales.includes( this.valor + this.unidad) ){
-            console.log( "Si existe ");
+
+            var numero;
+            numero = this.expresionesAUnidades();
+            this.setBandas( numero );
+            
         }else{
+
             console.log("No existe esa valor.")
+        
         }
-    }
-
-    convertir( ){
-
-        var numero;
-        numero = this.expresionesAUnidades();
-        this.convertirABandas( numero );
         console.log( this.codigocolor );
  
     }
@@ -84,6 +84,10 @@ class Resitencia{
         /*se asignan bandas*/
         banda1 = parseInt( numero / 10 );
         banda2 = Math.round((( numero / 10) - banda1) * 10 );
+        
+        /*Busca la banda4 */
+        if( this.tolerancias.includes( this.tolerancia ) )
+            banda4 = this.buscarTolerancia();
 
         this.codigocolor = [
             this.colorBanda[banda1], this.colorBanda[banda2],
@@ -91,14 +95,22 @@ class Resitencia{
         ];
     }
 
-    setTolerancia(){
-        dir = [][];
+    buscarTolerancia(){
+        var buscar=0;
+
+        for( buscar=0; buscar < this.tolerancias.length; buscar++ ){
+            if( this.tolerancias[buscar] == this.tolerancia )
+                return buscar;
+        }
+
+        return buscar;
     }
 
 }
 
 let res = new Resitencia( 1.8, "M", "5%" );
-res.convertir();
+res.convertirABandas();
+res.buscarTolerancia();
 
 
 
