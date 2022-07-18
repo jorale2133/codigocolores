@@ -10,19 +10,19 @@
     display: grid;
     grid-gap: 20px;
 
-    grid-template-columns: 6fr 3fr;
-    grid-template-rows: 1fr 4fr 4fr 1fr;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: 1fr 4fr 4fr 0.8fr;
 
     grid-template-areas:    "header header "
-                            "articulo widget "
-                            "section1 section2 "
+                            "articulo articulo "
+                            "widget section1 "
                             "footer footer " ;
 
 
 }
 
 .Grid .Cabecera{
-    padding: 15px;
+    padding: 2%;
 
     font-size: 3rem;
 
@@ -59,7 +59,6 @@
 
 
 .Grid footer{
-    
     height: 100%;
     background: rgba(0, 0, 0, 0.671);
     color: white;
@@ -69,4 +68,22 @@
     font-size: 300%;
 
     grid-area: footer;
+}
+
+@media screen and (max-width: 1060px){
+
+    .Grid{
+
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 3fr 3fr 2fr 0.8fr;
+
+        grid-template-areas:    "header"
+                                "articulo"
+                                "widget" 
+                                "section1 "
+                                "footer" ;
+
+
+        }
+
 }

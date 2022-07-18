@@ -22,11 +22,14 @@
     color: var(--colorPrincipalFont);
 }
 
+.Grid .Componente{
+    margin-top: 5%;
+}
+
 
 table{
 
-    margin: auto;
-
+    margin: 5% ;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
 
@@ -35,7 +38,7 @@ table{
 
 table th, table td{
     border: 1px solid white;
-    padding: 5px 10px;
+    padding: 5px 5px;
 }
 
 
@@ -51,7 +54,6 @@ button, select, input{
     padding-right: 10px;    
     border: var(--colorPrincipal);
     border-radius: 5% 5%;
-    margin: auto;
     background-color: var(--colorPrincipal);
     color: var(--colorPrincipalFont);
 
@@ -60,7 +62,7 @@ button, select, input{
 }
 
 button{
-    margin: 3% 180px;
+    margin: 50px 150px 100px 150px;
 }
 
 
