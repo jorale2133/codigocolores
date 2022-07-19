@@ -10,8 +10,8 @@
     display: grid;
     grid-gap: 20px;
 
-    grid-template-columns: 3fr 2fr;
-    grid-template-rows: 1fr 4fr 4fr 0.8fr;
+    grid-template-columns: 3fr 3fr;
+    grid-template-rows: 1fr 3fr 3fr 0.8fr;
 
     grid-template-areas:    "header header "
                             "articulo articulo "
@@ -70,7 +70,7 @@
     grid-area: footer;
 }
 
-@media screen and (max-width: 1060px){
+@media screen and (max-width: 900px){
 
     .Grid{
 

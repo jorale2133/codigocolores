@@ -54,6 +54,7 @@ button, select, input{
     padding-right: 10px;    
     border: var(--colorPrincipal);
     border-radius: 5% 5%;
+
     background-color: var(--colorPrincipal);
     color: var(--colorPrincipalFont);
 
@@ -61,15 +62,23 @@ button, select, input{
 
 }
 
-button{
-    margin: 50px 150px 100px 150px;
-}
-
-
-button:hover, select:hover,
+select:hover,
 input:hover{
     width: 120px;
     background-color: #b14b4b;
     transition: 0.5s;
 }
+
+button{
+    width: 110px;
+    margin: 20px 150px 100px 100px;
+
+}
+
+button:hover{
+    width: 160px;
+    background-color: #b14b4b;
+    transition: 0.5s;
+}
+
 
