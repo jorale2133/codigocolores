@@ -19,6 +19,11 @@ var resistenciasComerciales = [ "1", "10", "100", "1K", "10K", "100K", "1M",
 var tolerancias = [ "", "1%", "2%", "", "", "0.5%", "0.25%", "0.10%", "0.05%",
                     "", "5%", "10%" ];
 
+/*
+Verifica que exista la resistencia comecial y
+Convierte los valores de la resistencia a código  de colores 
+
+*/
 
 function convertirABandas( valor, unidad, tolerancia ){
 
@@ -33,6 +38,7 @@ function convertirABandas( valor, unidad, tolerancia ){
     }
 }
 
+/*Convierte el valor de la resistencia en un numero */
 function expresionesAUnidades( valor, unidad ){
 
     var numero = valor;
@@ -45,7 +51,7 @@ function expresionesAUnidades( valor, unidad ){
 
     return numero;
 }
-
+//Se obtienen el código de colores 
 function setBandas(numero, tolerancia){
     var banda1;
     var banda2;
@@ -77,7 +83,7 @@ function setBandas(numero, tolerancia){
             colorBanda[banda3], colorBanda[banda4] ];
 
 }
-
+//Regresa la posición donde se encuentra la tolerancia.
 function buscarTolerancia( tolerancia ){
     var buscar=0;
 
