@@ -1,5 +1,3 @@
-var unidad;
-
 var colorBanda = [ "black", "brown", "red", "orange", "yellow", 
                 "green", "blue", "violet", "grey", "white",
                 "gold", "silver" ];
@@ -23,9 +21,8 @@ var tolerancias = [ "", "1%", "2%", "", "", "0.5%", "0.25%", "0.10%", "0.05%",
 
 
 function convertirABandas( valor, unidad, tolerancia ){
-    
 
-    if( resistenciasComerciales.includes( valor + unidad) ){
+    if( resistenciasComerciales.includes( minimizar(valor) + unidad) ){
 
         var numero;
         numero = expresionesAUnidades( valor, unidad );
@@ -55,10 +52,11 @@ function setBandas(numero, tolerancia){
     var banda3=0;
     var banda4;
 
-    //Se ontiene el numero
+    //Se obtiene el numero
     while ( numero >= 100 ){
         numero = numero/10;
         banda3++;
+        
     }
 
     /*Exceopcion para los numeros decimales */
@@ -89,6 +87,13 @@ function buscarTolerancia( tolerancia ){
         }
 
     return buscar;
+}
+
+function minimizar( numero ){
+    while ( numero >= 100 ){
+        numero = numero/10; 
+    }
+    return numero;
 }
 
 export{ convertirABandas };
