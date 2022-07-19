@@ -1,10 +1,10 @@
-var codigocolor;
+var unidad;
 
-colorBanda = [ "black", "brown", "red", "orange", "yellow", 
+var colorBanda = [ "black", "brown", "red", "orange", "yellow", 
                 "green", "blue", "violet", "grey", "white",
                 "gold", "silver" ];
 
-resistenciasComerciales = [ "1", "10", "100", "1K", "10K", "100K", "1M",  
+var resistenciasComerciales = [ "1", "10", "100", "1K", "10K", "100K", "1M",  
                             "1.2", "12", "120", "1.2K", "12K", "120K", "1.2M",
                             "1.5", "15", "150", "1.5K", "15K", "150K", "1.5M",
                             "1.8", "18", "180", "1.8K", "18K", "180K", "1.8M",
@@ -18,23 +18,22 @@ resistenciasComerciales = [ "1", "10", "100", "1K", "10K", "100K", "1M",
                             "8.2", "82", "820", "8.2K", "82K", "820K", "8.2M",
                             "9.1", "91", "910", "9.1K", "91K", "910K", "9.1M" ];
 
-tolerancias = [ "", "1%", "2%", "", "", "0.5%", "0.25%", "0.10%", "0.05%",
-                "", "5%", "10%" ];
+var tolerancias = [ "", "1%", "2%", "", "", "0.5%", "0.25%", "0.10%", "0.05%",
+                    "", "5%", "10%" ];
 
 
 function convertirABandas( valor, unidad, tolerancia ){
+    
 
     if( resistenciasComerciales.includes( valor + unidad) ){
 
         var numero;
         numero = expresionesAUnidades( valor, unidad );
-        setBandas( numero, tolerancia );
+        return setBandas( numero, tolerancia );
             
     }else{
         console.log("No existe esa valor.")
     }
-        console.log( codigocolor );
-
 }
 
 function expresionesAUnidades( valor, unidad ){
@@ -76,10 +75,9 @@ function setBandas(numero, tolerancia){
     if( tolerancias.includes( tolerancia ) )
         banda4 = buscarTolerancia( tolerancia );
 
-        codigocolor = [
-            colorBanda[banda1], colorBanda[banda2],
-            colorBanda[banda3], colorBanda[banda4]
-        ];
+    return [ colorBanda[banda1], colorBanda[banda2],
+            colorBanda[banda3], colorBanda[banda4] ];
+
 }
 
 function buscarTolerancia( tolerancia ){
@@ -93,6 +91,4 @@ function buscarTolerancia( tolerancia ){
     return buscar;
 }
 
-convertirABandas( 6.8, "", "5%");
-
-
+export{ convertirABandas };

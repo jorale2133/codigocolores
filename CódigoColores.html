@@ -207,11 +207,11 @@
         <div class="Componente">
 
             <label for=""> <strong>Resistencia:</strong> </label>
-            <input type="number" name="resistor" id="resistencia">
+            <input type="number" name="valRes" id="valRes">
             
             <!-- inputs para la unidades-->
             <select name="unidades" id="unidades">
-                <option value="SN"> Sin unidades</option>
+                <option value=""> Sin unidades</option>
                 <option value="K"> K </option>
                 <option value="M"> M </option>
             </select>
@@ -229,7 +229,7 @@
             </select>
             <br>
 
-            <button>Calcular código de colores</button>
+            <button id="obtenerCodigo">Obtener código de colores</button>
             <br>
 
             <label for=""> <strong>Código de <br>Coloreres:</strong> </label>
@@ -310,8 +310,8 @@
 
     </div>
     
+    <script src="js/CódigoColores.js" type="module"></script>
+    <!--<script src="js/Resistencia.js"></script>-->
 
-
-    <script src="js/Resistencia.js"></script>
 </body>
 </html>
