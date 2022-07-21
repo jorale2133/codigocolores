@@ -29,7 +29,7 @@ function convertirABandas( valor, unidad, tolerancia ){
     if( resistenciasComerciales.includes( minimizar(valor) + unidad) ){
 
         var numero;
-        numero = expresionesAUnidades( valor, unidad );
+        numero = calcularMult( valor, unidad );
         return setBandas( numero, tolerancia );
             
     }else{
@@ -38,7 +38,7 @@ function convertirABandas( valor, unidad, tolerancia ){
 }
 
 /*Convierte el valor de la resistencia en un numero */
-function expresionesAUnidades( valor, unidad ){
+function calcularMult( valor, unidad ){
 
     var numero = valor;
 
@@ -83,16 +83,17 @@ function setBandas(numero, tolerancia){
             colorBanda[banda3], colorBanda[banda4] ];
 
 }
+
 //Regresa la posición donde se encuentra la tolerancia.
 function buscarTolerancia( tolerancia ){
-    var buscar=0;
+    var posicion=0;
 
-    for( buscar=0; buscar < tolerancias.length; buscar++ ){
-        if( tolerancias[buscar] == tolerancia )
-            return buscar;
+    for( posicion=0; posicion < tolerancias.length; posicion++ ){
+        if( tolerancias[posicion] == tolerancia )
+            return posicion;
         }
 
-    return buscar;
+    return posicion;
 }
 
 function minimizar( numero ){
@@ -104,8 +105,58 @@ function minimizar( numero ){
 
 function convertirAValor( banda1, banda2, banda3, banda4 ){
     
+    var valor;
+    var unidad = "";
+    var multiplicador;
+    var tolerancia;
+
+
+    multiplicador = Math.pow(10, buscarColorBanda(banda3));
+    valor = (buscarColorBanda(banda1)*10 + buscarColorBanda(banda2))*multiplicador;
+    tolerancia = tolerancias[buscarColorBanda(banda4)];
+
+    valor, unidad = calcularUnidad(valor);
+
+
+    if( resistenciasComerciales.includes(valor + unidad) ){
+        return [valor, unidad, tolerancia];
+    }else{
+        console.log("no existe");
+    }
+
+    console.log( valor + "" + unidad +  " +- " + tolerancia );
+
+}
+
+function buscarColorBanda( banda ){
+
+    var numero=0;
+    for(var posicion=0; posicion<colorBanda.length; posicion++){
+        if(colorBanda[posicion] == banda){
+            numero = posicion;
+        }
+    }
+    return numero;
+}
+
+function calcularUnidad( numero ){
+    var unidad = "";
+    numero = 0;
+    
+    if(numero/1000 >=1){
+        numero = numero/1000;
+        unidad = "K";
+    }
+
+    if( numero/1000000 >= 1){
+        numero = numero/1000000;
+        unidad = "M"
+    }
+
+    return numero, unidad;
 }
 
 
+convertirAValor("yellow","violet","red","silver");
 
-export{ convertirABandas };
+export{ convertirABandas, convertirAValor };
