@@ -115,11 +115,10 @@ function convertirAValor( banda1, banda2, banda3, banda4 ){
     valor = (buscarColorBanda(banda1)*10 + buscarColorBanda(banda2))*multiplicador;
     tolerancia = tolerancias[buscarColorBanda(banda4)];
 
-    valor, unidad = calcularUnidad(valor);
+    valor = calcularUnidad(valor);
 
-
-    if( resistenciasComerciales.includes(valor + unidad) ){
-        return [valor, unidad, tolerancia];
+    if( resistenciasComerciales.includes(valor[0] + valor[1]) ){
+        return [valor[0], valor[1], tolerancia];
     }else{
         console.log("no existe");
     }
@@ -131,6 +130,7 @@ function convertirAValor( banda1, banda2, banda3, banda4 ){
 function buscarColorBanda( banda ){
 
     var numero=0;
+
     for(var posicion=0; posicion<colorBanda.length; posicion++){
         if(colorBanda[posicion] == banda){
             numero = posicion;
@@ -141,19 +141,18 @@ function buscarColorBanda( banda ){
 
 function calcularUnidad( numero ){
     var unidad = "";
-    numero = 0;
-    
+
     if(numero/1000 >=1){
         numero = numero/1000;
         unidad = "K";
     }
-
-    if( numero/1000000 >= 1){
-        numero = numero/1000000;
+    
+    if( numero/1000 >= 1){
+        numero = numero/1000;
         unidad = "M"
     }
 
-    return numero, unidad;
+    return [numero, unidad];
 }
 
 

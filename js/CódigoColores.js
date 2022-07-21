@@ -33,13 +33,13 @@ var obtenerValor = function(){
     var tolBanda = document.getElementById("tolBanda");
 
     valor = convertirAValor(primeraBanda.value, segundaBanda.value, terceraBanda.value, tolBanda.value);
-    console.log( primeraBanda.value );
+    console.log( valor );
 
     texto = document.createTextNode( valor[0] + "" + valor[1] + " ohms " + valor[2] );
     box.replaceChildren(texto);
 
-    document.getElementsByClassName("banda")[0].style.background = primerBanda.value;
-    document.getElementsByClassName("banda")[1].style.background = segundoBanda.value;
+    document.getElementsByClassName("banda")[0].style.background = primeraBanda.value;
+    document.getElementsByClassName("banda")[1].style.background = segundaBanda.value;
     document.getElementsByClassName("banda")[2].style.background = terceraBanda.value;
     document.getElementsByClassName("banda")[3].style.background = tolBanda.value;
 
