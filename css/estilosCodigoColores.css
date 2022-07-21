@@ -81,4 +81,6 @@ button:hover{
     transition: 0.5s;
 }
 
-
+#infoRes{
+    margin-left: 150px;
+}
