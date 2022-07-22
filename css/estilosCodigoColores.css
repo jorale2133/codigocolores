@@ -64,7 +64,7 @@ button, select, input{
 
 select:hover,
 input:hover{
-    width: 1300px;
+    width: 130px;
     background-color: #b14b4b;
     transition: 0.5s;
 }
