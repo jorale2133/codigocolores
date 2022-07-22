@@ -64,7 +64,7 @@ button, select, input{
 
 select:hover,
 input:hover{
-    width: 120px;
+    width: 1300px;
     background-color: #b14b4b;
     transition: 0.5s;
 }
@@ -72,7 +72,6 @@ input:hover{
 button{
     width: 110px;
     margin: 20px 20px 20px 100px;
-
 }
 
 button:hover{
@@ -82,5 +81,6 @@ button:hover{
 }
 
 #infoRes{
+    font-weight: bold;
     margin-left: 180px;
 }

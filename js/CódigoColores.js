@@ -16,7 +16,7 @@ var obtenerCodigo = function(){
     console.log( codigoColor , parseFloat(resistencia.value) );
 
 
-    texto = document.createTextNode( parseFloat(resistencia.value) + "" + unidad.value + " ohms " + tolerancia.value );
+    texto = document.createTextNode( parseFloat(resistencia.value) + "" + unidad.value + " ohms " + tolerancia.value);
     box.replaceChildren(texto);
 
     document.getElementsByClassName("banda")[0].style.background = codigoColor[0];
