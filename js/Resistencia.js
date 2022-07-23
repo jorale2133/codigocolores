@@ -26,6 +26,7 @@ Convierte los valores de la resistencia a código  de colores
 */
 function convertirABandas( valor, unidad, tolerancia ){
 
+    
     if( resistenciasComerciales.includes( minimizar(valor) + unidad) ){
 
         var numero;
@@ -33,8 +34,9 @@ function convertirABandas( valor, unidad, tolerancia ){
         return setBandas( numero, tolerancia );
             
     }else{
-        console.log("No existe esa valor.")
+        throw "Esa resistencia no se ha encontrado.";
     }
+
 }
 
 /*Convierte el valor de la resistencia en un numero */
@@ -120,7 +122,7 @@ function convertirAValor( banda1, banda2, banda3, banda4 ){
     if( resistenciasComerciales.includes(valor[0] + valor[1]) ){
         return [valor[0], valor[1], tolerancia];
     }else{
-        console.log("no existe");
+        throw "No es una resistencia comercial.";
     }
 
     console.log( valor + "" + unidad +  " +- " + tolerancia );
