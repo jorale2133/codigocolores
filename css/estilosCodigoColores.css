@@ -13,6 +13,11 @@
     text-align: justify;
 }
 
+.Grid .Articulo img{
+    width: 400px;
+    height: 200px;
+}
+
 .Grid .Articulo{
     text-align: center;
 }

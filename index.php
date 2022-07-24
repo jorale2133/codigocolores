@@ -1,1 +1,1 @@
-<?php include_once("CódigoColores.html"); ?>
+<?php include_once("./view/CódigoColores.html"); ?>

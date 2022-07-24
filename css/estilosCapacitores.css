@@ -1,0 +1,32 @@
+:root{
+    --colorPrincipal: #92eb6a;
+    --colorPrincipalFont: white;
+    --tamañoAltura: 40px;
+}
+
+.Grid .Cabecera{
+    background: var(--colorPrincipal);
+    color: var(--colorPrincipalFont);
+}
+
+.Grid .Articulo p{
+    text-align: justify;
+}
+
+.Grid .Articulo img{
+    width: 400px;
+    height: 200px;
+}
+
+.Grid .Articulo{
+    text-align: center;
+}
+
+.Grid .Widget{
+    background-color: var(--colorPrincipal);
+    color: var(--colorPrincipalFont);
+}
+
+.Grid .Componente{
+    margin-top: 5%;
+}

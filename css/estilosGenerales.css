@@ -10,19 +10,19 @@
     display: grid;
     grid-gap: 20px;
 
-    grid-template-columns: 3fr 3fr;
+    grid-template-columns: 5fr 4fr 1fr;
     grid-template-rows: 1fr 3fr 3fr 0.8fr;
 
-    grid-template-areas:    "header header "
-                            "articulo articulo "
-                            "widget section1 "
-                            "footer footer " ;
+    grid-template-areas:    "header header header"
+                            "articulo articulo menu"
+                            "widget section1 section1"
+                            "footer footer footer" ;
 
 
 }
 
 .Grid .Cabecera{
-    padding: 2%;
+    padding: 30px;
 
     font-size: 3rem;
 
@@ -30,8 +30,8 @@
 }
 
 .Grid .Articulo{
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 50px;
+    margin-right: 50px;
     font-size: 1.5em;
 
     grid-area: articulo;
@@ -84,7 +84,7 @@ footer .enlace:hover{
 
 }
 
-footer a, a:hover, a.active{
+footer a, footer a:hover, footer a.active{
     color:rgb(255, 255, 255);
 }
 
