@@ -1,5 +1,5 @@
 :root{
-    --colorPrincipal: #92eb6a;
+    --colorPrincipal: #7dda52;
     --colorPrincipalFont: white;
     --tamañoAltura: 40px;
 }
@@ -7,6 +7,10 @@
 .Grid .Cabecera{
     background: var(--colorPrincipal);
     color: var(--colorPrincipalFont);
+}
+
+.Grid .Menu a div{
+    background: var(--colorPrincipal);
 }
 
 .Grid .Articulo p{

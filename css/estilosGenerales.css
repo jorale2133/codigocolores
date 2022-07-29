@@ -51,12 +51,34 @@
 
 
 .Grid .Menu{
-    background-color: #57c1ff;
-    color: white;
+    font-weight: 700;
     font-size: 1em;
-    grid-area: sidebar;
+    grid-area: menu;
+
 }
 
+.Menu div{
+
+    height: 100px;
+    width: 100px;
+    display: flex;
+    float: right;
+    margin: 25px 0px;
+    box-shadow: 10px 10px rgb(143, 138, 138);
+    transition: all 0.5s;
+}
+
+.Menu div:hover{
+    width: 120px;
+    transition: all 0.5s;
+}
+
+.Menu .enlace{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
 
 .Grid footer{
     height: 100%;
@@ -72,6 +94,7 @@
 
     grid-area: footer;
 }
+
 
 footer .enlace{
     padding: 50px 100px;
@@ -93,9 +116,10 @@ footer a, footer a:hover, footer a.active{
     .Grid{
 
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 3fr 3fr 2fr 0.8fr;
+        grid-template-rows: 1fr 0.5fr 3fr 3fr 2fr 0.8fr;
 
         grid-template-areas:    "header"
+                                "menu"
                                 "articulo"
                                 "widget" 
                                 "section1 "
@@ -103,5 +127,21 @@ footer a, footer a:hover, footer a.active{
 
 
         }
+
+    .Grid  .Menu div{
+        height: 100px;
+        width: 100px;
+        flex-direction: row;
+        float: left;
+        margin: -30px 20px;
+        box-shadow: 10px 10px rgb(143, 138, 138) ;
+        z-index: -1;
+    }
+
+    .Menu div:hover{
+        height: 130px;
+    }
+
+
 
 }

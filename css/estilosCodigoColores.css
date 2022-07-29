@@ -9,6 +9,10 @@
     color: var(--colorPrincipalFont);
 }
 
+.Grid .Menu a div{
+    background: var(--colorPrincipal);
+}
+
 .Grid .Articulo p{
     text-align: justify;
 }
@@ -30,6 +34,8 @@
 .Grid .Componente{
     margin-top: 5%;
 }
+
+
 
 
 table{
