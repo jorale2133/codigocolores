@@ -81,7 +81,7 @@
                     </div>
                 </a>
 
-                <a href="./CódigoCapacitores.html">
+                <a href="./view/CódigoCapacitores.html">
                     <div class="enlace">
                         <p>Capacitor</p>
                     </div>
