@@ -29,8 +29,32 @@
 .Grid .Widget{
     background-color: var(--colorPrincipal);
     color: var(--colorPrincipalFont);
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .Grid .Componente{
     margin-top: 5%;
+}
+
+table{
+    margin: 10px ;
+    font-size: 15px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+
+}
+
+table tbody tr td, th{
+    border: 1px solid white;
+    width: 90px;
+    height: 30px;
+}
+
+#CE, #CC{
+    height: 200px;
+    width: 200px;
 }

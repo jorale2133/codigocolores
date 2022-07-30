@@ -46,9 +46,16 @@
                 las unidades de este valor está en picoFaradios [pF]. Además este 
                 puede tener inmediatamente después una letra que expresa la 
                 tolerancia. Y al principio de este también puede tener un símbolo 
-                que indica el voltaje máximo que soporta el dispositivo. 
-
+                que indica el voltaje máximo que soporta el dispositivo.
+                <br><br>
+                En la parte posterior se encuentra una calculadora para obtener 
+                el código de este capacitor.
             </p>
+
+            <img src="../img/CapacitorCerámico.png" 
+            id="CC" alt="Imagen capacitor ceramicos">
+            <img src="../img/CapacitorElectrolictico.png" 
+            id="CE" alt="Imagen capacitor electrolictico">
 
         </article>
 
@@ -68,13 +75,89 @@
             </a>
         </nav>
 
-        <div class="Componente">
-
-        </div>
-
         <div class="Widget">
 
+            <table class="tabla Volt-Max">
+                
+                <thead>
+                    <th>Símbolo</th>
+                    <th>Voltaje máximo</th>
+                    <th>Símbolo</th>
+                    <th>Voltaje Máxima</th>
+                </thead>
+
+                <tbody>
+                    <tr> <td>0G</td><td>4VDC</td><td>0L</td><td>5.5VDC</td> </tr>
+                    <tr> <td>0J</td><td>6.3VDC</td><td>1A</td><td>10VDC</td> </tr>
+                    <tr> <td>1C</td><td>16VDC</td><td>1E</td><td>25VDC</td> </tr>
+                    <tr> <td>1H</td><td>50VDC</td><td>1J</td><td>63VDC</td> </tr>
+                    <tr> <td>1K</td><td>80VDC</td><td>2A</td><td>100VDC</td> </tr>
+                    <tr> <td>2Q</td><td>110VDC</td><td>2B</td><td>125VDC</td> </tr>
+                    <tr> <td>2C</td><td>160VDC</td><td>2Z</td><td>180VDC</td> </tr>
+                    <tr> <td>2D</td><td>200VDC</td><td>2P</td><td>220VDC</td> </tr>
+                    <tr> <td>2E</td><td>250VDC</td><td>2F</td><td>315VDC</td> </tr>
+                    <tr> <td>2V</td><td>350VDC</td><td>2G</td><td>400VDC</td> </tr>
+                    <tr> <td>2W</td><td>450VDC</td><td>2H</td><td>500VDC</td> </tr>
+                    <tr> <td>2J</td><td>630VDC</td><td>3A</td><td>1000VDC</td> </tr>
+
+                    
+                </tbody>
+
+            </table>
+
+            <table class="tabla Letra-Tol">
+                <thead>
+                    <th>Letra</th>
+                    <th>Tolerancia</th>
+                </thead>
+
+                <tbody>
+                    <tr><td>B</td><td>0.10pF</td></tr>
+                    <tr><td>C</td><td>0.25pF</td></tr>
+                    <tr><td>D</td><td>0.50pF</td></tr>
+                    <tr><td>E</td><td>0.50%</td></tr>
+                    <tr><td>F</td><td>1%</td></tr>
+                    <tr><td>G</td><td>2%</td></tr>
+                    <tr><td>H</td><td>3%</td></tr>
+                    <tr><td>J</td><td>5%</td></tr>
+                    <tr><td>K</td><td>10%</td></tr>
+                    <tr><td>M</td><td>20%</td></tr>
+                    <tr><td>N</td><td>30%</td></tr>
+                    <tr><td>P</td><td>100%</td></tr>
+                    <tr><td>Z</td><td>80%</td></tr>
+                </tbody>
+            </table>
+
+            <table class="tabla Digito-Mult">
+                <thead>
+                    <th> Tercer Digito </th>
+                    <th> Multiplicador </th>
+                </thead>
+
+                <tbody>
+                    <tr><td>0</td><td>1</td></tr>
+                    <tr><td>1</td><td>10</td></tr>
+                    <tr><td>2</td><td>100</td></tr>
+                    <tr><td>3</td><td>1000</td></tr>
+                    <tr><td>4</td><td>10000</td></tr>
+                    <tr><td>5</td><td>100000</td></tr>
+                    <tr><td>6</td><td>no se usa</td></tr>
+                    <tr><td>7</td><td>no se usa</td></tr>
+                    <tr><td>8</td><td>0.01</td></tr>
+                    <tr><td>9</td><td>1</td></tr>
+                </tbody>
+            </table>
+
+
+        </div>       
+        
+        <div class="Componente">
+
+
         </div>
+
+
+
 
 
 
