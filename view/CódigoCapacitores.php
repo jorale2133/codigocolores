@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Descripcion de la página-->
     <meta name="description" content="Obtener el código de capacitores">
-    <meta name="keywords" content="calculadora codigo capacitores">
+    <meta name="keywords" content="calculadora, codigo, capacitores,">
     <!-- Enlaces para google-->
     <meta name="google-site-verification" content="qwTOy1Hu8JtD-0iGqErkCtURiOHYDot_jH_L-xgeoUQ" />
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7889753153809847"

@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <meta name="description" content="Obtener el código de colores de las resistencias">
-    <meta name="keywords" content="calculadora codigo colores resistencia">
+    <meta name="keywords" content="calculadora, codigo, colores, resistencia">
 
     <meta name="google-site-verification" content="qwTOy1Hu8JtD-0iGqErkCtURiOHYDot_jH_L-xgeoUQ" />
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7889753153809847"
@@ -75,7 +75,7 @@
 
             <!--Menu de navegación -->
             <nav class="Menu">
-                <a href="">
+                <a href="./CódigoColores.html">
                     <div class="enlace">
                         <p>Resistencia</p>
                     </div>
